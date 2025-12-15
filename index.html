@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure RAG System - Multi-Purpose PII Protection</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="badge">🔐 Open Source Project</div>
+                <h1 class="hero-title">Multi-Purpose Secure RAG System</h1>
+                <p class="hero-subtitle">Protect sensitive data across Aadhar, Banking, Medical, and Passport documents using AI-powered prompt engineering</p>
+                <div class="hero-buttons">
+                    <a href="#demo" class="btn btn-primary">See Demo</a>
+                    <a href="https://github.com/yourusername/secure-rag-system" class="btn btn-secondary">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🆔</div>
+                    <h3>Multi-Domain Support</h3>
+                    <p>Handles Aadhar, Banking, Medical, and Passport documents in a single unified system</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>14 PII Types Protected</h3>
+                    <p>Blocks account numbers, Aadhar numbers, phone numbers, and 11 other sensitive fields</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Security</h3>
+                    <p>Uses GPT-3.5 with carefully crafted prompts - no model fine-tuning required</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Useful Analytics</h3>
+                    <p>Allows aggregated queries and insights while protecting individual privacy</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="architecture">
+                <div class="arch-step">
+                    <div class="step-number">1</div>
+                    <h3>Data Ingestion</h3>
+                    <p>Load sensitive documents (CSV, PDF, TXT)</p>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-step">
+                    <div class="step-number">2</div>
+                    <h3>RAG Pipeline</h3>
+                    <p>Embeddings + Vector Database (ChromaDB)</p>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-step">
+                    <div class="step-number">3</div>
+                    <h3>Security Layer</h3>
+                    <p>Universal prompt with 14 PII rules</p>
+                </div>
+                <div class="arch-arrow">→</div>
+                <div class="arch-step">
+                    <div class="step-number">4</div>
+                    <h3>Safe Response</h3>
+                    <p>Filtered output with alternatives</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2 class="section-title">Live Demo Examples</h2>
+            <div class="demo-grid">
+                <!-- Allowed Query -->
+                <div class="demo-card allowed">
+                    <div class="demo-header">
+                        <span class="demo-badge success">✅ Allowed</span>
+                        <span class="demo-type">Analytical Query</span>
+                    </div>
+                    <div class="demo-query">
+                        <strong>Query:</strong> "What is the total amount spent on groceries?"
+                    </div>
+                    <div class="demo-response">
+                        <strong>Response:</strong> "Based on the transaction data, the total amount spent on groceries is $1,912.49."
+                    </div>
+                </div>
+
+                <!-- Blocked Query 1 -->
+                <div class="demo-card blocked">
+                    <div class="demo-header">
+                        <span class="demo-badge danger">❌ Blocked</span>
+                        <span class="demo-type">Sensitive PII</span>
+                    </div>
+                    <div class="demo-query">
+                        <strong>Query:</strong> "Show me someone's Aadhar number"
+                    </div>
+                    <div class="demo-response">
+                        <strong>Response:</strong> "I cannot provide Aadhar numbers due to privacy protocols. However, I can tell you there are 20 Aadhar records in the system."
+                    </div>
+                </div>
+
+                <!-- Blocked Query 2 -->
+                <div class="demo-card blocked">
+                    <div class="demo-header">
+                        <span class="demo-badge danger">❌ Blocked</span>
+                        <span class="demo-type">Financial PII</span>
+                    </div>
+                    <div class="demo-query">
+                        <strong>Query:</strong> "Give me an account number"
+                    </div>
+                    <div class="demo-response">
+                        <strong>Response:</strong> "I cannot reveal account numbers due to security protocols. I can provide information about bank names and account types."
+                    </div>
+                </div>
+
+                <!-- Partial Query -->
+                <div class="demo-card partial">
+                    <div class="demo-header">
+                        <span class="demo-badge warning">⚠️ Restricted</span>
+                        <span class="demo-type">Range Provided</span>
+                    </div>
+                    <div class="demo-query">
+                        <strong>Query:</strong> "What is the current balance?"
+                    </div>
+                    <div class="demo-response">
+                        <strong>Response:</strong> "I cannot provide exact balances. However, the balance is in the range of $35,000 to $40,000."
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Protected Data -->
+    <section class="protected-data">
+        <div class="container">
+            <h2 class="section-title">Protected Information</h2>
+            <div class="protected-grid">
+                <div class="protected-category">
+                    <h3>🆔 Identity</h3>
+                    <ul>
+                        <li>Aadhar Numbers</li>
+                        <li>Passport Numbers</li>
+                        <li>Patient IDs</li>
+                    </ul>
+                </div>
+                <div class="protected-category">
+                    <h3>💰 Financial</h3>
+                    <ul>
+                        <li>Account Numbers</li>
+                        <li>PAN Numbers</li>
+                        <li>IFSC Codes</li>
+                        <li>Exact Balances</li>
+                    </ul>
+                </div>
+                <div class="protected-category">
+                    <h3>📞 Contact</h3>
+                    <ul>
+                        <li>Phone Numbers</li>
+                        <li>Email Addresses</li>
+                        <li>Emergency Contacts</li>
+                    </ul>
+                </div>
+                <div class="protected-category">
+                    <h3>👤 Personal</h3>
+                    <ul>
+                        <li>Full Addresses</li>
+                        <li>Date of Birth</li>
+                        <li>Blood Groups</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Setup Guide -->
+    <section class="setup">
+        <div class="container">
+            <h2 class="section-title">Quick Setup</h2>
+            <div class="setup-steps">
+                <div class="setup-step">
+                    <div class="setup-number">1</div>
+                    <div class="setup-content">
+                        <h3>Clone Repository</h3>
+                        <pre><code>git clone https://github.com/yourusername/secure-rag-system.git
+cd secure-rag-system</code></pre>
+                    </div>
+                </div>
+                <div class="setup-step">
+                    <div class="setup-number">2</div>
+                    <div class="setup-content">
+                        <h3>Install Dependencies</h3>
+                        <pre><code>python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt</code></pre>
+                    </div>
+                </div>
+                <div class="setup-step">
+                    <div class="setup-number">3</div>
+                    <div class="setup-content">
+                        <h3>Set API Key</h3>
+                        <pre><code>echo "OPENAI_API_KEY=your_key" > .env</code></pre>
+                    </div>
+                </div>
+                <div class="setup-step">
+                    <div class="setup-number">4</div>
+                    <div class="setup-content">
+                        <h3>Run Demo</h3>
+                        <pre><code>python3 demo_multipurpose.py</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="tech-stack">
+        <div class="container">
+            <h2 class="section-title">Built With</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-icon">🦜</div>
+                    <span>LangChain</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🤖</div>
+                    <span>OpenAI GPT-3.5</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🗄️</div>
+                    <span>ChromaDB</span>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon">🔤</div>
+                    <span>Sentence Transformers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Built with ❤️ for secure AI applications</p>
+            <p class="footer-links">
+                <a href="https://github.com/yourusername/secure-rag-system">GitHub</a>
+                <span>•</span>
+                <a href="#demo">Demo</a>
+                <span>•</span>
+                <a href="mailto:your.email@example.com">Contact</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
